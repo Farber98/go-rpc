@@ -1,4 +1,4 @@
-package common
+package structs
 
 import "fmt"
 
@@ -25,10 +25,10 @@ func (c *College) Add(payload Student, reply *Student) error {
 	return nil
 }
 
-func (c *College) Get(payload Student, reply *Student) error {
-	result, ok := c.studentsDb[payload.Id]
+func (c *College) Get(payload int, reply *Student) error {
+	result, ok := c.studentsDb[payload]
 	if !ok {
-		return fmt.Errorf("student with id %d does not exist", payload.Id)
+		return fmt.Errorf("student with id %d does not exist", payload)
 	}
 	*reply = result
 	return nil

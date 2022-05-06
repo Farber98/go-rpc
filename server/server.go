@@ -1,14 +1,14 @@
 package main
 
 import (
-	"go-rpc/common"
+	"go-rpc/structs"
 	"io"
 	"net/http"
 	"net/rpc"
 )
 
 func main() {
-	coll1 := common.NewCollege()
+	coll1 := structs.NewCollege()
 
 	rpc.Register(coll1)
 
