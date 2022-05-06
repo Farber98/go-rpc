@@ -1,7 +1,13 @@
 package main
 
-/* func main() {
-	client, _ := rpc.DialHTTP("tcp", "localhost:1626")
+import (
+	"fmt"
+	"go-rpc/structs"
+	"net/rpc/jsonrpc"
+)
+
+func main() {
+	client, _ := jsonrpc.Dial("tcp", "localhost:1727")
 
 	var st1 structs.Student
 
@@ -21,4 +27,3 @@ package main
 		fmt.Printf("Success:2 Student %s created with id=1 \n", st1.FullName())
 	}
 }
-*/

@@ -1,13 +1,6 @@
 package main
 
-import (
-	"go-rpc/structs"
-	"io"
-	"net/http"
-	"net/rpc"
-)
-
-func main() {
+/* func main() {
 	coll1 := structs.NewCollege()
 
 	rpc.Register(coll1)
@@ -20,3 +13,4 @@ func main() {
 
 	http.ListenAndServe(":1626", nil)
 }
+*/
